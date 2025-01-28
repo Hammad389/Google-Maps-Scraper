@@ -61,6 +61,9 @@ This repository contains a customizable Google Maps scraper designed to extract 
    ```
 
 ---
+![Terminal](https://github.com/user-attachments/assets/6e76bbad-32e6-4d12-ba67-6c8054376328)
+
+
 
 ## Customization
 
@@ -88,12 +91,10 @@ output_format = "CSV"  # Options: "CSV", "JSON"
 review_scrape = True  # Enable or disable review scraping
 website_scrape = False  # Enable or disable website scraping
 
-# Run the scraper
-scraper = Scraper()
-data_handler = DataHandler()
-website_scraper = WebsiteScraper()
-
-scraper.run(search_query, review_scrape, website_scrape, output_format)
+if __name__ == "__main__":
+    # Instantiate the Main class with custom configurations and start the scraper.
+    app = Main(headless_mode='--headless', reviews_scrape=True, output_format='csv', website_scrape=True)
+    app.run()
 ```
 
 ---
