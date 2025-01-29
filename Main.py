@@ -11,7 +11,7 @@ class Main:
                  output_format: str = 'csv',
                  reviews_scrape: bool = False,
                  website_scrape: bool = False,
-                 url: str = "https://www.google.com/maps/@31.506432,74.3243776,12z?entry=ttu",
+                 url: str = "https://www.google.com/maps/",
                  ) -> None:
         """
         Initializes the Main class with scraper configurations and Google Maps URL.
